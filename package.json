@@ -1,7 +1,7 @@
 {
   "name": "appseven",
-  "homepage": "https://SupakornLe.github.io/appseven",
   "version": "0.1.0",
+  "homepage": "https://supakornle.github.io/appseven",
   "private": true,
   "dependencies": {
     "framework7": "^1.6.4",
@@ -13,7 +13,7 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
