@@ -3,6 +3,7 @@ import {Form} from './components/pages/Form';
 import {findmin} from './components/pages/findmin';
 import CaseImplementCreateForm from './components/pages/CaseImplementCreateForm';
 import ContactUserForm from './components/pages/ContactUserForm';
+import AppointmentForm from './components/pages/AppointmentForm';
 
 export const routes = [{
     path: '/about/',
@@ -19,4 +20,7 @@ export const routes = [{
 }, {
     path: '/contactuserform/',
     component: ContactUserForm
+}, {
+    path: '/appointmentform/',
+    component: AppointmentForm
 }];
