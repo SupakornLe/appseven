@@ -30,10 +30,10 @@ export default class CaseStatusForm extends React.Component {
             <Navbar title="CaseStatusForm" backLink="Back" sliding />
 
               <List form>
-              <ListItem>
-                <FormLabel>textarea</FormLabel>
-                <FormInput type="textarea" onKeyup={(e)=>this.setState({textarea:e.target.value})} value={textarea} />
-              </ListItem>
+                <ListItem>
+                  <FormLabel>textarea</FormLabel>
+                  <FormInput type="textarea" onKeyup={(e)=>this.setState({textarea:e.target.value})} value={textarea} />
+                </ListItem>
             </List>
             {this.renderButtonSubmit()}
         </Page>

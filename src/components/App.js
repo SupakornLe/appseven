@@ -112,6 +112,7 @@ const MainViews = (props, context) => {
 							<ListItem link="/appointmentform/" title="AppointmentForm"></ListItem>
 							<ListItem link="/caseStatusbutton/" title="CaseStatusButton"></ListItem>
 							<ListItem link="/casestatusform/" title="CaseStatusForm"></ListItem>
+							<ListItem link="/casestatusformpending/" title="CaseStatusFormPending"></ListItem>
 
 						</List>
 						<ContentBlockTitle>Side Panels</ContentBlockTitle>

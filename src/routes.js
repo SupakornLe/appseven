@@ -6,6 +6,7 @@ import ContactUserForm from './components/pages/ContactUserForm';
 import AppointmentForm from './components/pages/AppointmentForm';
 import CaseStatusButton from './components/pages/CaseStatusButton';
 import CaseStatusForm from './components/pages/CaseStatusForm';
+import CaseStatusFormPending from './components/pages/CaseStatusFormPending';
 
 export const routes = [{
     path: '/about/',
@@ -31,4 +32,7 @@ export const routes = [{
 }, {
     path: '/casestatusform/',
     component: CaseStatusForm
+}, {
+    path: '/casestatusformpending/',
+    component: CaseStatusFormPending
 }];
