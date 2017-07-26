@@ -18,9 +18,9 @@ export default class ConfirmSrDelete extends React.Component {
         <Page>
             <Navbar title="ConfirmSrDelete" backLink="Back" sliding />
 
-            (<ContentBlock inner>
+            <ContentBlock inner>
               <Button fill style={pStyle} onClick={()=>this.submit()}>ยืนยันการลบ</Button>
-            </ContentBlock>);
+            </ContentBlock>
         </Page>
     );
   }
