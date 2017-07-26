@@ -11,6 +11,18 @@ export default class ContactUserForm extends React.Component {
     var {name,email,mobile,phone,company} = this.state;
     console.log(this.state);
   }
+
+  renderButtonSubmit = () => {
+    var {name,email} = this.state;
+    if(name.length>3!="" && email.length>3!=""){
+      return (<ContentBlock inner>
+        <Button fill style={pStyle} onClick={()=>this.submit()}>Submit</Button>
+      </ContentBlock>);
+    }else {
+      return <spam />
+    }
+  }
+
   render(){
       var {name,email,mobile,phone,company} = this.state;
       return (
@@ -41,9 +53,7 @@ export default class ContactUserForm extends React.Component {
 
 
             </List>
-            <ContentBlock inner>
-              <Button fill style={pStyle} onClick={()=>this.submit()}>Submit</Button>
-            </ContentBlock>
+            {this.renderButtonSubmit()}
         </Page>
     );
   }
