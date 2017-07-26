@@ -11,6 +11,18 @@ export default class AppointmentForm extends React.Component {
     var {appointment, expectduration} = this.state;
     console.log(this.state);
   }
+
+  renderButtonSubmit = () => {
+    var {appointment,expectduration} = this.state;
+    if(appointment.length>3!="" && expectduration.length>3!=""){
+      return (<ContentBlock inner>
+        <Button fill style={pStyle} onClick={()=>this.submit()}>Submit</Button>
+      </ContentBlock>);
+    }else {
+      return <spam />
+    }
+  }
+
   render(){
       var {appointment, expectduration} = this.state;
       return (
@@ -27,10 +39,7 @@ export default class AppointmentForm extends React.Component {
                   <FormInput type="number" onChange={(e)=>this.setState({expectduration:e.target.value})} value={expectduration} />
                 </ListItem>
             </List>
-
-            <ContentBlock inner>
-              <Button fill style={pStyle} onClick={()=>this.submit()}>Submit</Button>
-            </ContentBlock>
+            {this.renderButtonSubmit()}
         </Page>
     );
   }
