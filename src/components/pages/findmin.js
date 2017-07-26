@@ -1,36 +1,63 @@
-import React from 'react';
+import React  from 'react';
 import {Page, ContentBlock, Navbar, List, ListItem ,FormInput, GridRow, GridCol, Button} from 'framework7-react';
 
-export const findmin = () => {
+export class findmin extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {Number1:0, Number2:0, Number3:0, Number4:0, Number5:0,result:0}
+    }
+      min=()=>{
+        var {Number1,Number2,Number3,Number4,Number5,result} = this.state;
+
+        var stringInput = Number1+","+Number2+","+Number3+","+Number4+","+Number5;
+
+        var dataArray = stringInput.split(",");
+        result = 99999999;
+
+        for (var i = 0; i < dataArray.length; i++){
+          if(parseInt(dataArray[i])<result) {
+            result = dataArray[i];
+          }
+        }
+        this.setState({result});
+      }
+
+
+  render() {
     return (
         <Page>
             <Navbar title="Findmin" backLink="Back" sliding />
 
             <List from>
             <ListItem>
-							<FormInput name="Number1" placeholder="Number1" type="number" />
+							<FormInput placeholder="Number1" type="number" value={this.state.Number1}
+                onChange={(e)=>this.setState({Number1:parseInt(e.target.value)})} />
 						</ListItem>
             <ListItem>
-							<FormInput name="Number2" placeholder="Number2" type="number" />
+							<FormInput placeholder="Number2" type="number" value={this.state.Number2}
+                onChange={(e)=>this.setState({Number2:parseInt(e.target.value)})} />
 						</ListItem>
             <ListItem>
-							<FormInput name="Number3" placeholder="Number3" type="number" />
+							<FormInput placeholder="Number3" type="number" value={this.state.Number3}
+                onChange={(e)=>this.setState({Number3:parseInt(e.target.value)})} />
 						</ListItem>
             <ListItem>
-							<FormInput name="Number4" placeholder="Number4" type="number" />
+            <FormInput placeholder="Number4" type="number" value={this.state.Number4}
+              onChange={(e)=>this.setState({Number4:parseInt(e.target.value)})} />
 						</ListItem>
             <ListItem>
-							<FormInput name="Number5" placeholder="Number5" type="number" />
+            <FormInput placeholder="Number5" type="number" value={this.state.Number5}
+              onChange={(e)=>this.setState({Number5:parseInt(e.target.value)})} />
 						</ListItem>
-            <GridRow>
-              <GridCol width={50}>
-                <Button>Min</Button>
-              </GridCol>
-              </GridRow>
-              <ListItem>
-  							<FormInput name="Min" placeholder="Min" type="number" />
-  						</ListItem>
             </List>
+            <List from>
+              <ListItem title={this.state.result}>
+              </ListItem>
+            </List>
+            <GridRow>
+                <Button big fill coler="blue" onClick={this.min}>Min</Button>
+            </GridRow>
         </Page>
     );
+  }
 };
