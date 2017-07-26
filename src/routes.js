@@ -8,6 +8,7 @@ import CaseStatusButton from './components/pages/CaseStatusButton';
 import CaseStatusForm from './components/pages/CaseStatusForm';
 import CaseStatusFormPending from './components/pages/CaseStatusFormPending';
 import CaseStatusFormResolve from './components/pages/CaseStatusFormResolve';
+import ConfirmSrDelete from './components/pages/ConfirmSrDelete';
 
 export const routes = [{
     path: '/about/',
@@ -39,4 +40,7 @@ export const routes = [{
 }, {
     path: '/casestatusformresolve/',
     component: CaseStatusFormResolve
+}, {
+    path: '/confirmsrdelete/',
+    component: ConfirmSrDelete
 }];
