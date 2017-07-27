@@ -10,7 +10,7 @@ export default class ProjectCreateGerneralForm extends React.Component {
     this.state = {
       project_name:'', end_user:'', end_user_address:'',
       start:moment().format('YYYY-MM-DD'),
-      end:moment().add(30, 'days').format('YYYY-MM-DD')
+      end:moment().add(1, 'months').format('YYYY-MM-DD')
     }
 
     console.log(moment().format('YYYY-MM-DD'));
