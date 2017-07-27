@@ -9,6 +9,7 @@ import CaseStatusForm from './components/pages/CaseStatusForm';
 import CaseStatusFormPending from './components/pages/CaseStatusFormPending';
 import CaseStatusFormResolve from './components/pages/CaseStatusFormResolve';
 import ConfirmSrDelete from './components/pages/ConfirmSrDelete';
+import ProjectCreateGerneralForm from './components/pages/ProjectCreateGerneralForm';
 
 export const routes = [{
     path: '/about/',
@@ -43,4 +44,7 @@ export const routes = [{
 }, {
     path: '/confirmsrdelete/',
     component: ConfirmSrDelete
+}, {
+    path: '/projectcreategerneralform/',
+    component: ProjectCreateGerneralForm
 }];
